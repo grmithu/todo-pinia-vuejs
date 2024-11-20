@@ -10,7 +10,8 @@ export const useTasks = defineStore('tasks',{
                 {id: 3, name: 'Task 3', done: true},
                 {id: 4, name: 'Task 4', done: false},
                 {id: 5, name: 'Task 5', done: true},
-            ]
+            ],
+            sortable: "all"
 
         }
     },
@@ -32,6 +33,8 @@ export const useTasks = defineStore('tasks',{
         notDoneTasks(){
             return this.tasks.filter(task => !task.done)
         },
+
+
 
         countAllTasks(){
             return this.tasks.length
