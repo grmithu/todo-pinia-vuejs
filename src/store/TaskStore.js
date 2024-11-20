@@ -1,6 +1,7 @@
 import {defineStore} from "pinia";
 
 export const useTasks = defineStore('tasks',{
+    
     state: () => {
         return{
             tasks:[
@@ -22,9 +23,13 @@ export const useTasks = defineStore('tasks',{
         addTask(task){
             this.tasks.push(task);
             // console.log(task);
+        },
 
+        deleteTask(id){
+            this.tasks = this.tasks.filter(task => task.id !== id)
         }
+
+
     },
 
 });
-

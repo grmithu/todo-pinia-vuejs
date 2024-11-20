@@ -16,8 +16,6 @@
     <div class="max-h-screen bg-gray-200 h-screen flex items-center flex-col">
       <div class="max-w-xl w-full mt-60">
         
-        <!-- {{ store.name}}   
-        {{ store.tasks[3] }} -->
 
         <Header />
 

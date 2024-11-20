@@ -13,6 +13,5 @@
             <Task :task="task" />
            
         </div>
-
         
 </template>
