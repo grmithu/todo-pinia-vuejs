@@ -1,8 +1,11 @@
 <script setup>
     import { useTasks } from "../store/TaskStore";
     import Task from "./Task.vue";
+    import { storeToRefs } from "pinia";
 
     const store = useTasks()
+
+    const {filteredTasks} = storeToRefs(store)
 </script>
 
 <template>
@@ -11,7 +14,7 @@
 <div>
 
     <div 
-            v-for="task in store.filteredTasks"
+            v-for="task in filteredTasks"
             :key="task.id"
             class="flex border-t border-gray-200 py-2"
         >   
