@@ -14,6 +14,8 @@
         }
 
         store.addTask(newTask) 
+
+        task.value = ""
     }
 
 </script>

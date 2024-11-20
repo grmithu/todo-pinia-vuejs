@@ -7,6 +7,10 @@ const deleteTask = (id) => {
     store.deleteTask(id)
 }
 
+const handleToggle = (id) => {
+    store.handleToggle(id)
+}
+
 defineProps({
     task: Object
 })
@@ -18,9 +22,10 @@ defineProps({
 <template>
 
     <label for="" class="flex items-center">
-      <input :checked="task.done" type="checkbox" name="" class="h-5 w-5 text-blue-500 rounded-sm border-gray-300">
+      <input @change="handleToggle(task.id)" :checked="task.done" type="checkbox" name="" class="h-5 w-5 text-blue-500 rounded-sm border-gray-300">
       <span class="ml-2 text-gray-700" :class="task.done ? 'line-through' : '' " > {{ task.name }} </span>
     </label>
+
 
 
     <button @click="deleteTask(task.id)" class="ml-auto">

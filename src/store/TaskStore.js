@@ -16,7 +16,19 @@ export const useTasks = defineStore('tasks',{
     },
 
     getters: {
+        countAllTasks(){
+            return this.tasks.length
+        },
 
+        countDoneTasks(){
+            return this.tasks.filter(task => task.done).length
+        },
+
+        countNotDoneTasks(){
+            return this.tasks.filter(task => !task.done).length
+        },
+
+        
     },
 
     actions: {
@@ -27,6 +39,11 @@ export const useTasks = defineStore('tasks',{
 
         deleteTask(id){
             this.tasks = this.tasks.filter(task => task.id !== id)
+        },
+
+        handleToggle(id){
+            const task = this.tasks.find(task => task.id === id)
+            task.done = !task.done 
         }
 
 
