@@ -1,6 +1,6 @@
 <script setup>
     import { ref } from 'vue';
-import { useTasks } from '../store/TaskStore';
+    import { useTasks } from '../store/TaskStore';
 
     const store = useTasks()
 
@@ -11,7 +11,7 @@ import { useTasks } from '../store/TaskStore';
 
 <template>
 
-{{ sortable }}
+<!-- {{ sortable }} -->
 
     <div class="flex justify-end text-gray-500 mt-5">
         <div class="flex space-x-2">
