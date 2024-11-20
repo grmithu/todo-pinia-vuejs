@@ -18,8 +18,8 @@ export const useTasks = defineStore('tasks',{
 
     getters: {
 
-        filteredTask(){
-            return this.sortable === 'completed' ? this.doneTasks : this.sortable === 'pending' ? this.notDoneTasks : this.countAllTasks;
+        filteredTasks(){
+            return this.sortable === 'completed' ? this.doneTasks : this.sortable === 'pending' ? this.notDoneTasks : this.allTasks;
         },
 
         allTasks(){
