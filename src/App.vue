@@ -19,8 +19,6 @@
         <!-- {{ store.name}}   
         {{ store.tasks[3] }} -->
 
-
-
         <Header />
 
         <div class="bg-white p-5 rounded shadow">

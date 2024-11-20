@@ -19,7 +19,11 @@ export const useTasks = defineStore('tasks',{
     },
 
     actions: {
+        addTask(task){
+            this.tasks.push(task);
+            // console.log(task);
 
+        }
     },
 
 });
