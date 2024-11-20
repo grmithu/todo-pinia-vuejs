@@ -1,11 +1,15 @@
-
+<script setup>
+    defineProps({
+        task: Object
+    })
+</script>
 
 
 <template>
 
     <label for="" class="flex items-center">
-      <input  type="checkbox" name="" class="h-5 w-5 text-blue-500 rounded-sm border-gray-300">
-      <span class="ml-2 text-gray-700"  > Task 1 </span>
+      <input :checked="task.done" type="checkbox" name="" class="h-5 w-5 text-blue-500 rounded-sm border-gray-300">
+      <span class="ml-2 text-gray-700" :class="task.done ? 'line-through' : '' " > {{ task.name }} </span>
     </label>
 
 

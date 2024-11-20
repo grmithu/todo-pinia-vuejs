@@ -8,12 +8,11 @@
 <template>
 
         <div 
-        v-for="task in store.tasks "
+        v-for="task in store.tasks"  :key="task.id"
         class="flex border-t border-gray-200 py-2">   
              
-            <Task />
+            <Task :task="task" />
            
-
         </div>
 
 
