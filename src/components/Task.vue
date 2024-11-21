@@ -1,6 +1,6 @@
 <script setup>
 
-import { useTasks } from '../store/TaskStore';
+import { useTasks } from '../stores/TaskStore';
 const store = useTasks();
 
 const deleteTask = (id) => {

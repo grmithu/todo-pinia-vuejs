@@ -1,6 +1,6 @@
 <script setup>
     // import { ref } from 'vue';
-    import { useTasks } from '../store/TaskStore';
+    import { useTasks } from '../stores/TaskStore';
     import {storeToRefs} from 'pinia';
 
     const store = useTasks()

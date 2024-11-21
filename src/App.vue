@@ -4,9 +4,13 @@
     import TaskList from './components/TaskList.vue';
     import TaskFilter from './components/TaskFilter.vue';
 
-    import {useTasks} from "./store/TaskStore.js";
+    import {useTasks} from "./stores/TaskStore";
 
     const store = useTasks()
+    store.getTasks
+
+
+
 
 </script>
 
